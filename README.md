@@ -38,4 +38,7 @@ return [
     ]
 ];
 ```
+Screenshot
+======================
+![screenshots](https://github.com/chatfeed/yii2-doc/blob/master/screenshot.jpg)
 Thanks [yii2-fast-api](https://github.com/deepziyu/yii2-fast-api)
