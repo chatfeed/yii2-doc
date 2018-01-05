@@ -1,0 +1,28 @@
+{
+  "name": "chatfeed/yii2-doc",
+  "description": "auto document tool for Yii2 ",
+  "keywords": ["yii2", "doc", "api"],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/chatfeed/yii2-doc/issues",
+    "source": "https://github.com/chatfeed/yii2-doc"
+  },
+  "authors": [
+    {
+      "name": "chatfeed",
+      "email": "chatfeed@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "yiisoft/yii2": "~2.0.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "cfd\\doc\\": ""
+    }
+  },
+  "extra": {
+  }
+}
