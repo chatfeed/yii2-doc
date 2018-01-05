@@ -7,6 +7,10 @@ namespace cfd\doc\controllers;
  * Time: 下午2:19
  */
 
+/**
+ * @desc 示例模块
+ * @package cfd\doc\controllers
+ */
 class DemoController extends \yii\web\Controller{
 
     /**
@@ -20,6 +24,7 @@ class DemoController extends \yii\web\Controller{
      * @doc-return object<demo@id,name> demo2 自定义模型可选字段
      * @doc-return object<teacher> tec 自有数据模型
      * @doc-return object<teacher@cardId,is_checked> tec 自有数据模型选用字段
+     * @doc-return array<teacher@cardId> tlist 对象列表
      */
     public function actionGet(){
 

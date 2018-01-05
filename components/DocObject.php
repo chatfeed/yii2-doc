@@ -85,6 +85,7 @@ class DocObject{
                     }elseif(isset($labels[$a])){
                         $label = $labels[$a];
                     }else{
+                        var_dump("{$classname} {$a} label 不存在");exit;
                         throw new UserException("{$classname} {$a} label 不存在");
                     }
                     $ret[] = [
@@ -93,7 +94,7 @@ class DocObject{
                         $label
                     ];
                 }else{
-                    var_dump($labels,$matches);exit;
+                    var_dump("{$classname} 的 {$a} 文档注释不存在");exit;
                     throw new UserException("{$classname} 的 {$a} 文档注释不存在");
                 }
             }
