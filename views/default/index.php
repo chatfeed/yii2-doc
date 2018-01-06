@@ -89,8 +89,7 @@ function render_object($docObject,$param,$default_px=64){
         }
 
         .site-content {
-            float:right;;
-            width:800px;
+            width: calc(100% - 325px);
             height: 100%;
             padding: 20px 0 10px 20px;
             overflow: scroll;
@@ -282,6 +281,11 @@ function render_object($docObject,$param,$default_px=64){
         .site-block .layui-form {
             margin-right: 200px;
         }
+        .td_type {
+            display: block;
+            width: 400px;
+            overflow: hidden;
+        }
     </style>
 
 </head>
@@ -396,7 +400,7 @@ function render_object($docObject,$param,$default_px=64){
                                     <?php $i=$time=1;?>
                                     <tr>
                                         <td style="padding-left: 32px;"><?= $param[1] ?></td>
-                                        <td><?= htmlspecialchars($param[0]) ?></td>
+                                        <td class="td_type"><?= htmlspecialchars($param[0]) ?></td>
                                         <td><?= $param[2] ?></td>
                                     </tr>
 
@@ -408,7 +412,7 @@ function render_object($docObject,$param,$default_px=64){
                                 <?php elseif(preg_match('/(?:\<)(.*)(?:\>)/i', $param[0], $match) && isset($match[1])):?>
                                     <tr>
                                         <td style="padding-left: 32px;"><?= $param[1] ?></td>
-                                        <td><?= htmlspecialchars($param[0]) ?></td>
+                                        <td class="td_type"><?= htmlspecialchars($param[0]) ?></td>
                                         <td><?= $param[2] ?></td>
                                     </tr>
 
@@ -421,7 +425,7 @@ function render_object($docObject,$param,$default_px=64){
                                 <?php else:?>
                                     <tr>
                                         <td style="padding-left: 32px;"><?= $param[1] ?></td>
-                                        <td><?= htmlspecialchars($param[0]) ?></td>
+                                        <td class="td_type"><?= htmlspecialchars($param[0]) ?></td>
                                         <td><?= $param[2] ?></td>
                                     </tr>
                                 <?php endif;?>

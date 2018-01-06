@@ -69,6 +69,7 @@ class DefaultController extends Controller{
     }
 
     public function actionPostmanJson(){
+        $version  = \Yii::$app->request->get('v',1);
         $this->layout = false;
         $model = new Route();
         $routes =  $model->getRoutes();
@@ -78,6 +79,9 @@ class DefaultController extends Controller{
         $item = [];
         foreach ($routes as $k=>$route){
             if(is_string($route)) continue;//过滤模型
+            if(!isset($route['version'])) $route['version'] = 0;
+            if($version && $version!=$route['version']) continue;
+
             if(count($route)<=1 && isset($route['name'])){
                 $i++;
                 $item[$i] =[
